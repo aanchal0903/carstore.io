@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details</title>
+</head>
+<link rel="stylesheet" href="styles.css">
+   
+<body>
+
+    <div class="product-page-container">
+        <!--route-->
+        <span class="link-route">
+            <a href="#">Home</a> > <a href="#">Gallery</a>
+        </span>
+    </div>
+
+    <section class="product-page">
+        <!--img-->
+   <div class="product-page-img"><iframe title="Clutch" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/0575c46984a944d6a535dadfce1d347b/embed?autostart=1&camera=0"> </iframe></div>
+   <!--details-->
+   <div class="product-page-details">
+
+    <!--title-->
+   <strong>Clutch</strong>
+   <span class="product-category">
+   Clutch for Car
+   </span>
+   <span class="price">Rs.6000</span>
+  <!--details-->
+  <p class="small-desc">A clutch is a mechanical device that allows the output shaft to be disconnected from the rotating input shaft. The clutch's input shaft is typically attached to a motor, while the clutch's output shaft is connected to the mechanism that does the work..</p>
+    <!--discount-->
+    <span class="product-page-offer">20% discount</span>
+    <!--cart btn-->
+<div class="cart-btns">
+    <a href="#" class="add-cart">Add to Cart</a>
+    <a href="addtocardv2-main/index.html" class="add-cart buy-now">Buy Now</a>
+</div>    
+<!--price and shipping-->
+<div class="price-shipping">
+    <strong> +RS.100 shipping</strong>
+</div>
+
+     
+    
+
+        </div>
+        
+
+    
+    
+   
+  
+
+   
+
+    </section>
+    <!--product-info-->
+    <section class="product-all-info">
+        <!--menu-->
+        <ul class="product-info-menu">
+            <li class="p-info-list active" data-filter="Highlights">Highlights</li>
+           <a href="Gallery.html"><li class="p-info-list" data-filter="Materials">Materials</li></a>
+            <li class="p-info-list"data-filter="About">About</li>
+
+
+
+        </ul>
+        <div class="info-container Highlights active ">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita alias ex magnam unde necessitatibus atque ullam tempora, quidem doloribus quisquam numquam quaerat, optio totam vitae temporibus! Ipsum exercitationem est quas?</p>
+        </div>
+        <div class="info-container Materials">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita alias ex magnam unde necessitatibus atque ullam tempora, quidem doloribus quisquam numquam quaerat, optio totam vitae temporibus! Ipsum exercitationem est quas?</p>
+        </div>
+
+        <div class="info-container About">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita alias ex magnam unde necessitatibus atque ullam tempora, quidem doloribus quisquam numquam quaerat, optio totam vitae temporibus! Ipsum exercitationem est quas?</p>
+        </div>
+
+
+    </section>
+    </div>
+    <script type="text/javascript" src="New folder/jquery-3.6.3.js"></script>
+    <script text="text/javascript">
+        //product info menu
+        $(document).on('click','.product-info-menu li',function()
+            {
+            $(this).addClass('active').siblings().removeClass('active')
+            });
+            //product-info-filter
+            $(document).ready(function(){
+             
+$('.p-info-list').click(function(){
+    const value= $(this).attr('data-filter');
+    if(value=='all')
+    {
+        $('.info-container').filter('.'+value).show('1000');
+
+    }
+    else{
+        $('.info-container').not('.'+value).hide('1000');
+        $('.info-container').filter('.'+value).show('1000');
+    }
+});
+                
+});
+    </script>
+</body>
+</html>
